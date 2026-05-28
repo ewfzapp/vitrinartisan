@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facturation électronique artisan 2026 — Guide complet — VitrinArtisan</title>
+<meta name="description" content="Guide complet sur la dématérialisation des factures pour artisans et auto-entrepreneurs : calendrier, Chorus Pro, Factur-X, plateformes PDP. Obligations 2026.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">Vitrin<span>Artisan</span></a>
+    <ul class="nav-links">
+      <li><a href="ia.html">IA Juridique</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="demat.html" class="active">Dématérialisation</a></li>
+      <li><a href="fiches.html">Fiches pratiques</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div style="background:linear-gradient(135deg,#1A6B42 0%,#2A9B62 100%);color:var(--blanc);padding:48px 24px 40px">
+  <div class="container">
+    <span class="badge" style="background:rgba(255,255,255,.2);color:white;margin-bottom:16px;display:inline-block">Obligation légale</span>
+    <h1 style="font-family:'DM Serif Display',serif;font-size:clamp(28px,4vw,44px);line-height:1.2;margin-bottom:12px">Facturation électronique :<br>tout ce que l'artisan doit savoir</h1>
+    <p style="opacity:.85;font-size:16px;max-width:600px">Calendrier, obligations, plateformes homologuées, format Factur-X, Chorus Pro… Le guide complet pour les artisans et auto-entrepreneurs du BTP.</p>
+  </div>
+</div>
+
+<!-- ALERTE ECHEANCE -->
+<div style="background:#FFF3CD;border-bottom:1px solid #FFDA6A;padding:16px 24px">
+  <div class="container" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+    <span style="font-size:20px">⏰</span>
+    <p style="font-size:14px;color:#664D03;flex:1"><strong>Échéance clé : 1er septembre 2026</strong> — Toutes les entreprises devront être en mesure de <strong>recevoir</strong> des factures électroniques. L'obligation d'<strong>émettre</strong> sera progressive selon la taille de l'entreprise.</p>
+    <a href="#calendrier" class="btn" style="background:#664D03;color:white;padding:8px 16px;font-size:13px">Voir le calendrier</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <!-- QU'EST-CE QUE C'EST -->
+    <div style="margin-bottom:56px">
+      <h2>C'est quoi exactement la facturation électronique ?</h2>
+      <p class="section-sub">Et pourquoi ça change tout par rapport à un PDF envoyé par email</p>
+      <div class="grid-2">
+        <div class="card" style="border-left:4px solid #E53E3E">
+          <h3 style="color:#E53E3E">❌ Ce que ce n'est PAS</h3>
+          <ul style="margin-top:12px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+            <li style="font-size:14px;color:var(--texte-sec);padding:8px 12px;background:var(--fond);border-radius:8px">📧 Envoyer un PDF par email</li>
+            <li style="font-size:14px;color:var(--texte-sec);padding:8px 12px;background:var(--fond);border-radius:8px">📄 Numériser une facture papier</li>
+            <li style="font-size:14px;color:var(--texte-sec);padding:8px 12px;background:var(--fond);border-radius:8px">💾 Stocker des factures dans un dossier numérique</li>
+            <li style="font-size:14px;color:var(--texte-sec);padding:8px 12px;background:var(--fond);border-radius:8px">🖨️ Une facture Word ou Excel "numérisée"</li>
+          </ul>
+        </div>
+        <div class="card" style="border-left:4px solid #1A6B42">
+          <h3 style="color:#1A6B42">✅ Ce que c'est</h3>
+          <ul style="margin-top:12px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+            <li style="font-size:14px;color:var(--texte-sec);padding:8px 12px;background:#EAF7F0;border-radius:8px">🗂️ Un fichier structuré (XML ou PDF/A-3 avec données XML)</li>
+            <li style="font-size:14px;color:var(--texte-sec);padding:8px 12px;background:#EAF7F0;border-radius:8px">🔄 Transmis via une plateforme homologuée (PDP ou PPF)</li>
+            <li style="font-size:14px;color:var(--texte-sec);padding:8px 12px;background:#EAF7F0;border-radius:8px">📡 Déclaré automatiquement à la DGFiP (TVA)</li>
+            <li style="font-size:14px;color:var(--texte-sec);padding:8px 12px;background:#EAF7F0;border-radius:8px">🤖 Lisible et traitables par les logiciels comptables</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CALENDRIER -->
+    <div id="calendrier" style="margin-bottom:56px">
+      <h2>Calendrier des obligations</h2>
+      <p class="section-sub">La réforme s'applique progressivement selon la taille de l'entreprise</p>
+      <div style="overflow-x:auto;border-radius:var(--radius);border:1px solid var(--bordure)">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Qui est concerné</th>
+              <th>Obligation de recevoir</th>
+              <th>Obligation d'émettre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Dès maintenant</strong></td>
+              <td>Marchés publics (État, collectivités)</td>
+              <td class="tag-ok">✓ Déjà obligatoire</td>
+              <td class="tag-ok">✓ Via Chorus Pro</td>
+            </tr>
+            <tr>
+              <td><strong>1er sept. 2026</strong></td>
+              <td>Toutes les entreprises assujetties à la TVA</td>
+              <td class="tag-ok">✓ Obligatoire</td>
+              <td class="tag-att">→ Grandes entreprises</td>
+            </tr>
+            <tr>
+              <td><strong>1er sept. 2027</strong></td>
+              <td>ETI (Entreprises de taille intermédiaire)</td>
+              <td class="tag-ok">✓ Déjà obligatoire</td>
+              <td class="tag-att">→ Obligatoire</td>
+            </tr>
+            <tr>
+              <td><strong>1er sept. 2027</strong></td>
+              <td>PME, TPE, artisans, auto-entrepreneurs</td>
+              <td class="tag-ok">✓ Déjà obligatoire</td>
+              <td class="tag-ok">✓ Obligatoire</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13px;color:var(--texte-sec);margin-top:12px">⚠️ Ces dates peuvent évoluer. Source : Direction Générale des Finances Publiques (DGFiP). Vérifiez sur <a href="https://www.impots.gouv.fr" target="_blank" style="color:var(--bleu)">impots.gouv.fr</a>.</p>
+    </div>
+
+    <!-- QUI EST CONCERNE -->
+    <div style="margin-bottom:56px">
+      <h2>Êtes-vous concerné en tant qu'artisan ?</h2>
+      <p class="section-sub">La réforme s'applique uniquement aux transactions B2B (entre professionnels assujettis à la TVA)</p>
+      <div class="grid-3">
+        <div class="card" style="border-top:4px solid #1A6B42">
+          <div class="card-icon" style="background:#EAF7F0">🏗️</div>
+          <h3>Artisan avec clients professionnels</h3>
+          <p>Si vous facturez des entreprises, des SCI, des promoteurs… vous êtes pleinement concerné par la réforme dès septembre 2026 (réception) et 2027 (émission).</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--or)">
+          <div class="card-icon or">🏠</div>
+          <h3>Artisan avec particuliers uniquement</h3>
+          <p>La facturation électronique obligatoire concerne les transactions B2B. Si vous ne facturez que des particuliers, vous n'êtes <strong>pas directement concerné par l'émission</strong>. Mais vous devrez recevoir des e-factures de vos fournisseurs.</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--bleu)">
+          <div class="card-icon bleu">👤</div>
+          <h3>Auto-entrepreneur / micro-entreprise</h3>
+          <p>Si vous êtes auto-entrepreneur assujetti à la TVA et facturez des professionnels, vous êtes concerné. Si vous bénéficiez de la franchise en base de TVA, les règles peuvent différer — vérifiez avec votre expert-comptable.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LES FORMATS -->
+    <div style="margin-bottom:56px">
+      <h2>Les formats de facturation électronique</h2>
+      <p class="section-sub">Trois formats sont acceptés en France</p>
+      <div class="grid-3">
+        <div class="card">
+          <span class="badge badge-bleu" style="margin-bottom:12px">Recommandé artisans</span>
+          <h3>Factur-X</h3>
+          <p>Un PDF lisible par l'œil humain, avec un fichier XML intégré. C'est le format le plus adapté aux petites entreprises : votre client voit une facture normale, mais elle contient les données structurées obligatoires.</p>
+          <p style="margin-top:8px;font-size:13px;color:var(--bleu);font-weight:600">→ Pris en charge par la plupart des logiciels de facturation</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-or" style="margin-bottom:12px">Grandes entreprises</span>
+          <h3>UBL (Universal Business Language)</h3>
+          <p>Format XML pur, très répandu en Europe. Principalement utilisé par les grandes entreprises avec des ERP. Moins courant pour les artisans mais reconnu officiellement.</p>
+        </div>
+        <div class="card">
+          <span class="badge" style="background:#EAF7F0;color:#1A6B42;margin-bottom:12px">Secteur public</span>
+          <h3>CII (Cross Industry Invoice)</h3>
+          <p>Autre format XML, dérivé de la norme EN 16931. Utilisé notamment dans les échanges EDI entre grandes entreprises et avec les administrations publiques.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LES PLATEFORMES -->
+    <div style="margin-bottom:56px">
+      <h2>Par où passer ? Les plateformes disponibles</h2>
+      <p class="section-sub">Vous devrez obligatoirement passer par une plateforme homologuée pour émettre et recevoir vos factures</p>
+
+      <div class="card" style="margin-bottom:20px;border-left:4px solid #1A6B42">
+        <div style="display:flex;align-items:flex-start;gap:16px">
+          <div class="card-icon" style="background:#EAF7F0;flex-shrink:0;font-size:28px;width:52px;height:52px">🏛️</div>
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+              <h3>Chorus Pro</h3>
+              <span class="badge badge-vert">100% gratuit</span>
+              <span class="badge badge-bleu">Déjà opérationnel</span>
+            </div>
+            <p>La plateforme de l'État, gérée par l'AIFE. Déjà obligatoire pour les marchés publics. Elle sera le "Portail Public de Facturation" (PPF), accessible à toutes les entreprises gratuitement. Idéale pour les artisans qui veulent une solution sans frais.</p>
+            <a href="https://chorus-pro.gouv.fr" target="_blank" class="btn btn-outline" style="margin-top:12px;padding:8px 16px;font-size:13px">Accéder à Chorus Pro →</a>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-weight:600;margin-bottom:12px;color:var(--texte)">Plateformes de Dématérialisation Partenaires (PDP) homologuées — payantes mais avec plus de services :</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Pennylane</h3>
+          <p style="font-size:13px">Logiciel de comptabilité avec facturation électronique intégrée. Populaire chez les TPE.</p>
+        </div>
+        <div class="card">
+          <h3>Axonaut</h3>
+          <p style="font-size:13px">Gestion commerciale et facturation pour artisans et PME.</p>
+        </div>
+        <div class="card">
+          <h3>QuickBooks / Sage</h3>
+          <p style="font-size:13px">Solutions comptables intégrant la e-facturation pour les entreprises plus structurées.</p>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--texte-sec);margin-top:12px">La liste officielle des PDP homologuées est publiée par la DGFiP sur <a href="https://www.impots.gouv.fr" target="_blank" style="color:var(--bleu)">impots.gouv.fr</a>.</p>
+    </div>
+
+    <!-- ETAPES PRATIQUES -->
+    <div style="margin-bottom:56px">
+      <h2>Comment se préparer ? Les étapes pratiques</h2>
+      <p class="section-sub">Un plan en 4 étapes pour ne pas être pris au dépourvu</p>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="width:36px;height:36px;background:var(--bleu);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0">1</div>
+          <div class="card" style="flex:1">
+            <h3>Vérifier si vous êtes concerné</h3>
+            <p>Identifiez la part de vos factures émises à des professionnels assujettis à la TVA. Si elle est non nulle, vous devez vous préparer.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="width:36px;height:36px;background:var(--bleu);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0">2</div>
+          <div class="card" style="flex:1">
+            <h3>Choisir votre plateforme</h3>
+            <p>Pour les artisans sans logiciel de facturation : <strong>Chorus Pro est gratuit et suffisant</strong>. Pour ceux qui ont déjà un logiciel, vérifiez qu'il sera homologué ou prévu pour l'être.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="width:36px;height:36px;background:var(--bleu);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0">3</div>
+          <div class="card" style="flex:1">
+            <h3>Créer votre compte Chorus Pro dès maintenant</h3>
+            <p>L'inscription est gratuite et immédiate. Testez la plateforme avant que l'obligation entre en vigueur. La prise en main demande quelques heures.</p>
+            <a href="https://chorus-pro.gouv.fr" target="_blank" class="btn btn-outline" style="margin-top:12px;padding:8px 16px;font-size:13px">S'inscrire sur Chorus Pro →</a>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="width:36px;height:36px;background:var(--bleu);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0">4</div>
+          <div class="card" style="flex:1">
+            <h3>Se former et informer ses clients</h3>
+            <p>La Chambre des Métiers propose des formations gratuites sur la dématérialisation. Informez également vos clients professionnels de votre future plateforme.</p>
+            <a href="https://www.artisanat.fr" target="_blank" class="btn btn-outline" style="margin-top:12px;padding:8px 16px;font-size:13px">Chambre des Métiers →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div style="margin-bottom:40px">
+      <h2>Questions fréquentes</h2>
+      <p class="section-sub">Les réponses aux questions les plus posées par les artisans</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <details style="border:1px solid var(--bordure);border-radius:10px;padding:16px 20px;cursor:pointer">
+          <summary style="font-weight:600;font-size:15px;list-style:none">▶ Est-ce que ça concerne aussi mes factures aux particuliers ?</summary>
+          <p style="margin-top:12px;font-size:14px;color:var(--texte-sec)">Non. La facturation électronique obligatoire ne concerne que les transactions B2B (entre professionnels). Vos factures aux particuliers (personnes physiques) restent sous le régime actuel. Cependant, vos fournisseurs professionnels vous enverront des e-factures.</p>
+        </details>
+        <details style="border:1px solid var(--bordure);border-radius:10px;padding:16px 20px;cursor:pointer">
+          <summary style="font-weight:600;font-size:15px;list-style:none">▶ Je suis en franchise de TVA, suis-je concerné ?</summary>
+          <p style="margin-top:12px;font-size:14px;color:var(--texte-sec)">Les entreprises non assujetties à la TVA (franchise en base) ne sont a priori pas concernées par l'obligation d'émettre des e-factures. Elles devront cependant être en mesure de recevoir des factures électroniques de leurs fournisseurs. Vérifiez avec votre expert-comptable car les règles peuvent évoluer.</p>
+        </details>
+        <details style="border:1px solid var(--bordure);border-radius:10px;padding:16px 20px;cursor:pointer">
+          <summary style="font-weight:600;font-size:15px;list-style:none">▶ Mon logiciel de devis/facturation sera-t-il adapté ?</summary>
+          <p style="margin-top:12px;font-size:14px;color:var(--texte-sec)">La plupart des logiciels de facturation (EBP, Sage, Ciel, etc.) se mettent à jour pour être compatibles. Contactez votre éditeur pour vérifier leur feuille de route. Si vous utilisez Excel ou Word, il faudra passer à une solution dédiée.</p>
+        </details>
+        <details style="border:1px solid var(--bordure);border-radius:10px;padding:16px 20px;cursor:pointer">
+          <summary style="font-weight:600;font-size:15px;list-style:none">▶ Qu'est-ce que le "e-reporting" ?</summary>
+          <p style="margin-top:12px;font-size:14px;color:var(--texte-sec)">En parallèle de la e-facturation (B2B), le gouvernement instaure un "e-reporting" : la transmission automatique à la DGFiP des données de TVA sur vos transactions avec des particuliers et des clients étrangers. Cela remplacera à terme les déclarations de TVA manuelles.</p>
+        </details>
+        <details style="border:1px solid var(--bordure);border-radius:10px;padding:16px 20px;cursor:pointer">
+          <summary style="font-weight:600;font-size=15px;list-style:none">▶ Y a-t-il des sanctions en cas de non-respect ?</summary>
+          <p style="margin-top:12px;font-size:14px;color:var(--texte-sec)">Oui. Le non-respect de l'obligation d'émettre des factures électroniques peut entraîner des amendes. Le montant exact est défini par arrêté. La Direction Générale des Finances Publiques reste néanmoins pragmatique dans la phase de démarrage pour accompagner les entreprises.</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>⚖️ Note —</strong> Les informations de cette page sont fournies à titre indicatif. La réglementation sur la facturation électronique évolue. Consultez <a href="https://www.impots.gouv.fr" target="_blank" style="color:#664D03;font-weight:600">impots.gouv.fr</a> pour les informations officielles et à jour.
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p><strong>VitrinArtisan.com</strong> — Guide juridique et administratif pour artisans</p>
+  <p style="margin-top:8px"><a href="mentions.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></p>
+</footer>
+
+<script>
+document.querySelectorAll('details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    const arrow = d.querySelector('summary');
+    arrow.textContent = arrow.textContent.replace(d.open ? '▶' : '▼', d.open ? '▼' : '▶');
+  });
+});
+</script>
+
+</body>
+</html>

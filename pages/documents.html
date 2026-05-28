@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modèles de documents artisan — VitrinArtisan</title>
+<meta name="description" content="Téléchargez gratuitement des modèles de lettres et documents pour artisans : mise en demeure, CGV, contrat sous-traitance, réclamation fournisseur.">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">Vitrin<span>Artisan</span></a>
+    <ul class="nav-links">
+      <li><a href="ia.html">IA Juridique</a></li>
+      <li><a href="documents.html" class="active">Documents</a></li>
+      <li><a href="demat.html">Dématérialisation</a></li>
+      <li><a href="fiches.html">Fiches pratiques</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div style="background:var(--bleu);color:var(--blanc);padding:40px 24px 36px">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+      <span style="font-size:32px">📄</span>
+      <div>
+        <h1 style="font-family:'DM Serif Display',serif;font-size:28px;line-height:1.2">Modèles de documents</h1>
+        <p style="opacity:.7;font-size:14px;margin-top:2px">Personnalisez et téléchargez en PDF · 100% gratuit</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section style="padding:32px 24px">
+  <div class="container">
+
+    <div class="disclaimer">
+      <strong>📋 Note —</strong> Ces modèles ont un caractère général. Vérifiez qu'ils correspondent à votre situation avant utilisation. Pour des cas complexes, consultez un professionnel juridique.
+    </div>
+
+    <!-- LISTE DES DOCUMENTS -->
+    <div class="doc-list" id="docList">
+
+      <div class="doc-item" onclick="openDoc('miseEnDemeure')" style="cursor:pointer">
+        <div class="doc-icon">⚠️</div>
+        <div class="doc-info">
+          <h4>Lettre de mise en demeure — Client impayé</h4>
+          <p>Pour exiger le paiement d'une facture en retard. Étape obligatoire avant toute procédure judiciaire.</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-shrink:0">
+          <span class="badge badge-vert">Prêt en 2 min</span>
+          <button class="btn btn-outline" style="padding:8px 16px;font-size:13px" onclick="event.stopPropagation();openDoc('miseEnDemeure')">Personnaliser →</button>
+        </div>
+      </div>
+
+      <div class="doc-item" onclick="openDoc('contratSousTraitance')" style="cursor:pointer">
+        <div class="doc-icon">🤝</div>
+        <div class="doc-info">
+          <h4>Contrat de sous-traitance</h4>
+          <p>Conforme à la loi du 31 décembre 1975. Protège le sous-traitant et l'entrepreneur principal.</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-shrink:0">
+          <span class="badge badge-bleu">Loi 1975</span>
+          <button class="btn btn-outline" style="padding:8px 16px;font-size:13px" onclick="event.stopPropagation();openDoc('contratSousTraitance')">Personnaliser →</button>
+        </div>
+      </div>
+
+      <div class="doc-item" onclick="openDoc('cgv')" style="cursor:pointer">
+        <div class="doc-icon">📋</div>
+        <div class="doc-info">
+          <h4>Conditions Générales de Vente (CGV) artisan</h4>
+          <p>CGV adaptées aux artisans du BTP : délais de paiement, pénalités de retard, garanties légales.</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-shrink:0">
+          <span class="badge badge-or">Obligatoire B2C</span>
+          <button class="btn btn-outline" style="padding:8px 16px;font-size:13px" onclick="event.stopPropagation();openDoc('cgv')">Personnaliser →</button>
+        </div>
+      </div>
+
+      <div class="doc-item" onclick="openDoc('reclamationFournisseur')" style="cursor:pointer">
+        <div class="doc-icon">📦</div>
+        <div class="doc-info">
+          <h4>Lettre de réclamation fournisseur</h4>
+          <p>Pour signaler une livraison incomplète, un matériel défectueux ou un retard de livraison.</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-shrink:0">
+          <span class="badge badge-bleu">Rapide</span>
+          <button class="btn btn-outline" style="padding:8px 16px;font-size:13px" onclick="event.stopPropagation();openDoc('reclamationFournisseur')">Personnaliser →</button>
+        </div>
+      </div>
+
+      <div class="doc-item" onclick="openDoc('resiliationAssurance')" style="cursor:pointer">
+        <div class="doc-icon">🛡️</div>
+        <div class="doc-info">
+          <h4>Lettre de résiliation d'assurance décennale</h4>
+          <p>Pour résilier à l'échéance ou après sinistre. Inclut les délais légaux de préavis.</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-shrink:0">
+          <span class="badge badge-or">LRAR recommandée</span>
+          <button class="btn btn-outline" style="padding:8px 16px;font-size:13px" onclick="event.stopPropagation();openDoc('resiliationAssurance')">Personnaliser →</button>
+        </div>
+      </div>
+
+      <div class="doc-item" onclick="openDoc('abandonChantier')" style="cursor:pointer">
+        <div class="doc-icon">🏗️</div>
+        <div class="doc-info">
+          <h4>Mise en demeure — Abandon de chantier par le client</h4>
+          <p>Quand le client bloque l'avancement des travaux ou refuse l'accès au chantier.</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-shrink:0">
+          <span class="badge badge-vert">Prêt en 2 min</span>
+          <button class="btn btn-outline" style="padding:8px 16px;font-size:13px" onclick="event.stopPropagation();openDoc('abandonChantier')">Personnaliser →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL DOCUMENT -->
+<div id="docModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;overflow-y:auto;padding:40px 20px">
+  <div style="max-width:680px;margin:0 auto;background:var(--blanc);border-radius:16px;overflow:hidden">
+    <div style="background:var(--bleu);color:var(--blanc);padding:24px 28px;display:flex;justify-content:space-between;align-items:center">
+      <h2 id="modalTitle" style="font-family:'DM Serif Display',serif;font-size:22px"></h2>
+      <button onclick="closeDoc()" style="background:none;border:none;color:white;font-size:24px;cursor:pointer;line-height:1">×</button>
+    </div>
+    <div style="padding:28px">
+      <div id="modalFields"></div>
+      <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="downloadPDF()">📥 Télécharger PDF</button>
+        <button class="btn btn-outline" onclick="copyText()">📋 Copier le texte</button>
+        <button class="btn" style="background:var(--fond);color:var(--texte-sec)" onclick="closeDoc()">Fermer</button>
+      </div>
+      <div style="margin-top:24px;padding:20px;background:var(--fond);border-radius:10px;border:1px solid var(--bordure)">
+        <p style="font-size:12px;color:var(--texte-sec);margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Aperçu du document</p>
+        <div id="docPreview" style="font-size:13px;line-height:1.8;color:var(--texte);white-space:pre-wrap;font-family:Georgia,serif"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p><strong>VitrinArtisan.com</strong> — Guide juridique et administratif pour artisans</p>
+  <p style="margin-top:8px"><a href="mentions.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></p>
+</footer>
+
+<script>
+const DOCS = {
+  miseEnDemeure: {
+    title: 'Lettre de mise en demeure — Client impayé',
+    fields: [
+      { id: 'artisanNom', label: 'Votre nom / raison sociale', placeholder: 'Jean Dupont ou SARL Dupont Plomberie' },
+      { id: 'artisanAdresse', label: 'Votre adresse complète', placeholder: '12 rue des Artisans, 69000 Lyon' },
+      { id: 'artisanSiret', label: 'Votre numéro SIRET', placeholder: '123 456 789 00012' },
+      { id: 'clientNom', label: 'Nom du client débiteur', placeholder: 'M. Martin ou SCI Les Pins' },
+      { id: 'clientAdresse', label: 'Adresse du client', placeholder: '5 avenue du Général, 69100 Villeurbanne' },
+      { id: 'factureNum', label: 'Numéro de facture', placeholder: 'FA-2025-042' },
+      { id: 'factureDate', label: 'Date de la facture', placeholder: '15/03/2025' },
+      { id: 'montant', label: 'Montant TTC impayé (€)', placeholder: '3 500,00' },
+      { id: 'echeance', label: 'Date d\'échéance initiale', placeholder: '15/04/2025' },
+    ],
+    generate: (f) => {
+      const today = new Date().toLocaleDateString('fr-FR');
+      return `${f.artisanNom}
+${f.artisanAdresse}
+SIRET : ${f.artisanSiret}
+
+${f.clientNom}
+${f.clientAdresse}
+
+${today}
+
+Objet : MISE EN DEMEURE DE PAYER — Facture n° ${f.factureNum}
+Envoi en recommandé avec accusé de réception
+
+Madame, Monsieur,
+
+Malgré nos rappels amiables, je me vois contraint(e) de vous adresser la présente mise en demeure.
+
+En effet, la facture n° ${f.factureNum} en date du ${f.factureDate}, d'un montant de ${f.montant} € TTC, arrivée à échéance le ${f.echeance}, demeure impayée à ce jour.
+
+Conformément à l'article 1344 du Code civil, je vous mets en demeure de procéder au règlement de la somme de ${f.montant} € TTC dans un délai de 8 jours à compter de la réception de la présente.
+
+À défaut de règlement dans ce délai, je me verrai contraint(e) d'engager toutes voies de droit à votre encontre, y compris le recours à une injonction de payer ou à une action en justice, dont les frais seront à votre charge.
+
+Des pénalités de retard au taux légal en vigueur (majoré de 8 points conformément à l'article L.441-10 du Code de commerce pour les transactions B2B) sont dues de plein droit depuis la date d'échéance.
+
+Dans l'espoir que cette démarche ne soit pas nécessaire et que vous régulariserez votre situation rapidement, je reste disponible pour tout échange amiable.
+
+Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+${f.artisanNom}
+
+---
+⚠️ Ce document est fourni à titre de modèle général. Consultez un professionnel pour toute situation spécifique.`;
+    }
+  },
+
+  contratSousTraitance: {
+    title: 'Contrat de sous-traitance',
+    fields: [
+      { id: 'entrepreneur', label: 'Nom de l\'entrepreneur principal', placeholder: 'SARL Dupont BTP' },
+      { id: 'entSiret', label: 'SIRET entrepreneur principal', placeholder: '123 456 789 00012' },
+      { id: 'sousTraitant', label: 'Nom du sous-traitant', placeholder: 'M. Martin ou EURL Martin Elec' },
+      { id: 'stSiret', label: 'SIRET sous-traitant', placeholder: '987 654 321 00034' },
+      { id: 'chantier', label: 'Description du chantier', placeholder: 'Rénovation complète appartement 80m², 12 rue des Lilas Lyon' },
+      { id: 'travaux', label: 'Nature des travaux sous-traités', placeholder: 'Travaux d\'électricité : pose tableau, câblage, prises' },
+      { id: 'montantSt', label: 'Montant HT sous-traité (€)', placeholder: '8 500,00' },
+      { id: 'delai', label: 'Délai d\'exécution', placeholder: 'Du 01/06/2025 au 30/06/2025' },
+      { id: 'paiement', label: 'Modalités de paiement', placeholder: '30 jours fin de mois à réception facture' },
+    ],
+    generate: (f) => {
+      const today = new Date().toLocaleDateString('fr-FR');
+      return `CONTRAT DE SOUS-TRAITANCE
+Établi conformément à la loi n°75-1334 du 31 décembre 1975
+
+Entre :
+L'entrepreneur principal : ${f.entrepreneur}
+SIRET : ${f.entSiret}
+ci-après dénommé "l'Entrepreneur"
+
+Et :
+Le sous-traitant : ${f.sousTraitant}
+SIRET : ${f.stSiret}
+ci-après dénommé "le Sous-traitant"
+
+---
+
+ARTICLE 1 — OBJET DU CONTRAT
+Le présent contrat a pour objet de définir les conditions dans lesquelles le Sous-traitant réalisera les travaux suivants dans le cadre du chantier ci-dessous :
+
+Chantier : ${f.chantier}
+Travaux sous-traités : ${f.travaux}
+
+ARTICLE 2 — MONTANT ET RÈGLEMENT
+Montant HT des travaux sous-traités : ${f.montantSt} €
+TVA applicable selon la nature des travaux
+Modalités de paiement : ${f.paiement}
+
+Conformément à l'article 14 de la loi du 31/12/1975, le Sous-traitant bénéficie d'une action directe contre le maître d'ouvrage en cas de défaillance de l'Entrepreneur.
+
+ARTICLE 3 — DÉLAI D'EXÉCUTION
+${f.delai}
+
+ARTICLE 4 — ASSURANCES
+Le Sous-traitant déclare être assuré en responsabilité civile professionnelle et, le cas échéant, en assurance décennale pour les travaux relevant de la garantie décennale. Il s'engage à fournir l'attestation correspondante avant le début des travaux.
+
+ARTICLE 5 — OBLIGATIONS DU SOUS-TRAITANT
+- Respecter les délais convenus
+- Se conformer aux règles de l'art et aux DTU applicables
+- Respecter les consignes de sécurité sur le chantier
+- Ne pas sous-traiter à nouveau sans accord écrit préalable
+
+ARTICLE 6 — LITIGES
+En cas de litige, les parties s'engagent à rechercher une solution amiable avant tout recours judiciaire. À défaut, le Tribunal de Commerce compétent sera saisi.
+
+Fait en deux exemplaires originaux, à __________, le ${today}
+
+L'Entrepreneur principal :                    Le Sous-traitant :
+${f.entrepreneur}                             ${f.sousTraitant}
+
+Signature :                                   Signature :
+
+
+---
+⚠️ Ce document est fourni à titre de modèle général. Consultez un professionnel pour toute situation spécifique.`;
+    }
+  },
+
+  cgv: {
+    title: 'Conditions Générales de Vente — Artisan BTP',
+    fields: [
+      { id: 'entreprise', label: 'Nom de votre entreprise', placeholder: 'SARL Dupont Plomberie' },
+      { id: 'siret', label: 'Numéro SIRET', placeholder: '123 456 789 00012' },
+      { id: 'adresse', label: 'Adresse du siège', placeholder: '12 rue des Artisans, 69000 Lyon' },
+      { id: 'email', label: 'Email de contact', placeholder: 'contact@dupont-plomberie.fr' },
+      { id: 'activite', label: 'Activité principale', placeholder: 'Plomberie, chauffage et sanitaire' },
+    ],
+    generate: (f) => {
+      const today = new Date().toLocaleDateString('fr-FR');
+      return `CONDITIONS GÉNÉRALES DE VENTE (CGV)
+${f.entreprise} — SIRET ${f.siret}
+${f.adresse}
+Contact : ${f.email}
+En vigueur au ${today}
+
+ARTICLE 1 — CHAMP D'APPLICATION
+Les présentes CGV s'appliquent à toutes les ventes de services et travaux réalisés par ${f.entreprise} (ci-après "l'Artisan") dans le cadre de son activité de ${f.activite}.
+
+ARTICLE 2 — DEVIS ET COMMANDE
+Tout devis est valable 30 jours à compter de sa date d'émission. La signature du devis par le client vaut acceptation des présentes CGV. Pour les particuliers, un droit de rétractation de 14 jours s'applique pour les contrats conclus à distance ou hors établissement (art. L221-18 Code de la consommation), sauf commencement d'exécution à la demande expresse du client.
+
+ARTICLE 3 — PRIX ET TVA
+Les prix sont exprimés hors taxes. La TVA applicable est ajoutée au taux légal en vigueur selon la nature des travaux (5,5%, 10% ou 20%). Tout travail supplémentaire fera l'objet d'un devis complémentaire signé.
+
+ARTICLE 4 — CONDITIONS DE PAIEMENT
+Sauf mention contraire sur le devis, les factures sont payables à 30 jours date de facture. Un acompte de 30% peut être demandé à la commande. Le solde est payable à la réception des travaux.
+
+Pénalités de retard : En cas de retard de paiement, des pénalités au taux de trois fois le taux d'intérêt légal sont automatiquement applicables, ainsi qu'une indemnité forfaitaire de 40 € pour frais de recouvrement (art. L.441-10 du Code de commerce).
+
+ARTICLE 5 — GARANTIES LÉGALES
+L'Artisan est soumis aux garanties légales suivantes :
+• Garantie de parfait achèvement (1 an) : art. 1792-6 du Code civil
+• Garantie biennale (2 ans) pour les éléments d'équipement
+• Garantie décennale (10 ans) pour les travaux de construction : art. 1792 du Code civil
+
+ARTICLE 6 — ASSURANCE
+${f.entreprise} est assuré en responsabilité civile professionnelle et en garantie décennale. Les attestations sont disponibles sur simple demande.
+
+ARTICLE 7 — LITIGES
+En cas de litige, les parties s'efforceront de trouver un accord amiable. Le client peut également recourir à un médiateur de la consommation. À défaut, le tribunal compétent sera le tribunal du lieu d'exécution des travaux.
+
+${f.entreprise} — ${f.adresse}
+
+---
+⚠️ Ce document est fourni à titre de modèle général. Adaptez-le à votre situation et faites-le valider par un professionnel.`;
+    }
+  },
+
+  reclamationFournisseur: {
+    title: 'Lettre de réclamation fournisseur',
+    fields: [
+      { id: 'artisanNom', label: 'Votre nom / raison sociale', placeholder: 'Jean Dupont — SARL Dupont Plomberie' },
+      { id: 'artisanAdresse', label: 'Votre adresse', placeholder: '12 rue des Artisans, 69000 Lyon' },
+      { id: 'fournisseur', label: 'Nom du fournisseur', placeholder: 'GSB Matériaux Pro' },
+      { id: 'fournisseurAdresse', label: 'Adresse du fournisseur', placeholder: 'ZI des Prés, 38000 Grenoble' },
+      { id: 'bonCommande', label: 'Numéro de bon de commande', placeholder: 'BC-2025-187' },
+      { id: 'dateCommande', label: 'Date de commande', placeholder: '10/04/2025' },
+      { id: 'probleme', label: 'Nature du problème', placeholder: 'Livraison incomplète : 15 ml de tube cuivre 32mm manquants / Matériel défectueux : 3 robinets présentant des fuites / Retard de 3 semaines sans justification' },
+    ],
+    generate: (f) => {
+      const today = new Date().toLocaleDateString('fr-FR');
+      return `${f.artisanNom}
+${f.artisanAdresse}
+
+${f.fournisseur}
+${f.fournisseurAdresse}
+
+${today}
+
+Objet : Réclamation — Bon de commande n° ${f.bonCommande} du ${f.dateCommande}
+Lettre recommandée avec accusé de réception
+
+Madame, Monsieur,
+
+Je me permets de vous contacter concernant la commande référencée ci-dessus, pour vous signaler le problème suivant :
+
+${f.probleme}
+
+Cette situation me cause un préjudice direct en retardant l'avancement de mon chantier et en engendrant des surcoûts.
+
+En conséquence, je vous demande de :
+□ Compléter la livraison manquante dans les 5 jours ouvrés
+□ Remplacer les articles défectueux dans les meilleurs délais
+□ Me communiquer un nouveau délai de livraison ferme et engagé
+□ M'accorder un avoir correspondant au préjudice subi
+
+À défaut de réponse satisfaisante dans un délai de 8 jours, je me réserve le droit d'annuler la commande et d'en demander le remboursement intégral, ainsi que de demander réparation du préjudice subi.
+
+Je reste disponible pour échanger à l'amiable et espère que nous pourrons résoudre rapidement cette situation.
+
+Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+${f.artisanNom}
+
+---
+⚠️ Ce document est fourni à titre de modèle général.`;
+    }
+  },
+
+  resiliationAssurance: {
+    title: 'Lettre de résiliation d\'assurance décennale',
+    fields: [
+      { id: 'assure', label: 'Votre nom / raison sociale', placeholder: 'Jean Dupont — SARL Dupont Plomberie' },
+      { id: 'assureAdresse', label: 'Votre adresse', placeholder: '12 rue des Artisans, 69000 Lyon' },
+      { id: 'assureur', label: 'Nom de l\'assureur', placeholder: 'AXA Entreprises — Service Résiliation' },
+      { id: 'assureurAdresse', label: 'Adresse de l\'assureur', placeholder: 'TSA 12345, 75000 Paris' },
+      { id: 'numContrat', label: 'Numéro de contrat', placeholder: 'DEC-2020-456789' },
+      { id: 'motif', label: 'Motif de résiliation', placeholder: 'À l\'échéance annuelle / Changement d\'assureur / Cessation d\'activité' },
+    ],
+    generate: (f) => {
+      const today = new Date().toLocaleDateString('fr-FR');
+      return `${f.assure}
+${f.assureAdresse}
+
+${f.assureur}
+${f.assureurAdresse}
+
+${today}
+
+Objet : Résiliation du contrat d'assurance décennale n° ${f.numContrat}
+Lettre recommandée avec accusé de réception
+
+Madame, Monsieur,
+
+Je vous informe par la présente de ma décision de résilier le contrat d'assurance décennale référencé ci-dessus.
+
+Motif : ${f.motif}
+
+Conformément aux dispositions de la loi n°89-1014 du 31 décembre 1989 (loi Bérégovoy) et aux conditions générales de mon contrat, je vous adresse cette demande dans le respect du délai de préavis applicable.
+
+Je vous serais reconnaissant(e) de bien vouloir :
+• Confirmer la prise en compte de cette résiliation par écrit
+• M'indiquer la date effective de résiliation
+• Me confirmer le remboursement de la cotisation proratisée si applicable
+
+Je reste à votre disposition pour toute information complémentaire.
+
+Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+${f.assure}
+
+Important : Conservez une attestation de votre ancienne assurance. La garantie décennale couvre les sinistres déclarés pendant 10 ans après la réception des travaux, même si le contrat est résilié.
+
+---
+⚠️ Ce document est fourni à titre de modèle général. Vérifiez les délais de préavis de votre contrat.`;
+    }
+  },
+
+  abandonChantier: {
+    title: 'Mise en demeure — Entrave aux travaux par le client',
+    fields: [
+      { id: 'artisanNom', label: 'Votre nom / raison sociale', placeholder: 'SARL Dupont Maçonnerie' },
+      { id: 'artisanAdresse', label: 'Votre adresse', placeholder: '12 rue des Artisans, 69000 Lyon' },
+      { id: 'clientNom', label: 'Nom du client', placeholder: 'M. et Mme Bernard' },
+      { id: 'clientAdresse', label: 'Adresse du client', placeholder: '8 chemin des Collines, 01000 Bourg-en-Bresse' },
+      { id: 'chantier', label: 'Adresse du chantier', placeholder: '8 chemin des Collines, 01000 Bourg-en-Bresse' },
+      { id: 'devisRef', label: 'Référence du devis/contrat', placeholder: 'Devis n° DV-2025-023 du 01/03/2025' },
+      { id: 'probleme', label: 'Description du problème', placeholder: 'Refus d\'accès au chantier depuis le 10/05/2025 / Non-paiement de l\'acompte prévu / Présence d\'obstacles empêchant l\'exécution des travaux' },
+    ],
+    generate: (f) => {
+      const today = new Date().toLocaleDateString('fr-FR');
+      return `${f.artisanNom}
+${f.artisanAdresse}
+
+${f.clientNom}
+${f.clientAdresse}
+
+${today}
+
+Objet : MISE EN DEMEURE — Entrave à l'exécution des travaux
+Référence : ${f.devisRef}
+Lettre recommandée avec accusé de réception
+
+Madame, Monsieur,
+
+Je me réfère au contrat conclu entre nous pour la réalisation de travaux au ${f.chantier}.
+
+Je dois vous informer que l'exécution des travaux prévus est actuellement rendue impossible en raison de :
+
+${f.probleme}
+
+Cette situation constitue une inexécution de vos obligations contractuelles au titre de l'article 1193 du Code civil, qui prévoit l'obligation pour le client de permettre l'exécution des travaux commandés.
+
+En conséquence, je vous mets en demeure de :
+• Permettre immédiatement l'accès au chantier et de lever tout obstacle à l'exécution des travaux
+• Régulariser votre situation dans un délai de 8 jours à compter de la réception de la présente
+
+Passé ce délai, et à défaut de régularisation, je me réserve le droit de :
+• Suspendre définitivement le chantier aux torts exclusifs du maître d'ouvrage
+• Facturer les frais d'immobilisation et de remobilisation
+• Vous réclamer l'intégralité du marché en dommages et intérêts
+
+Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+${f.artisanNom}
+
+---
+⚠️ Ce document est fourni à titre de modèle général. Consultez un professionnel pour toute situation spécifique.`;
+    }
+  }
+};
+
+let currentDoc = null;
+
+function openDoc(docId) {
+  currentDoc = docId;
+  const doc = DOCS[docId];
+  document.getElementById('modalTitle').textContent = doc.title;
+
+  let fieldsHtml = doc.fields.map(f => `
+    <div style="margin-bottom:16px">
+      <label style="display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--texte-sec)">${f.label}</label>
+      <input type="text" id="field_${f.id}" placeholder="${f.placeholder}" oninput="updatePreview()"
+        style="width:100%;padding:10px 14px;border:1.5px solid var(--bordure);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .2s;color:var(--texte)"
+        onfocus="this.style.borderColor='var(--bleu)'" onblur="this.style.borderColor='var(--bordure)'">
+    </div>
+  `).join('');
+
+  document.getElementById('modalFields').innerHTML = fieldsHtml;
+  document.getElementById('docModal').style.display = 'block';
+  updatePreview();
+}
+
+function closeDoc() {
+  document.getElementById('docModal').style.display = 'none';
+  currentDoc = null;
+}
+
+function getFields() {
+  const doc = DOCS[currentDoc];
+  const values = {};
+  doc.fields.forEach(f => {
+    const el = document.getElementById(`field_${f.id}`);
+    values[f.id] = el?.value || `[${f.label}]`;
+  });
+  return values;
+}
+
+function updatePreview() {
+  if (!currentDoc) return;
+  const text = DOCS[currentDoc].generate(getFields());
+  document.getElementById('docPreview').textContent = text;
+}
+
+function downloadPDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
+  const text = DOCS[currentDoc].generate(getFields());
+  const title = DOCS[currentDoc].title;
+
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(12);
+  doc.setTextColor(26, 60, 94);
+  doc.text('VitrinArtisan.com', 20, 15);
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(10);
+  doc.setTextColor(60, 60, 60);
+
+  const lines = doc.splitTextToSize(text, 170);
+  doc.text(lines, 20, 30);
+
+  doc.setFontSize(8);
+  doc.setTextColor(150, 150, 150);
+  doc.text('Document généré sur VitrinArtisan.com — Modèle informatif uniquement', 20, 285);
+
+  doc.save(`vitrinartisan-${currentDoc}-${Date.now()}.pdf`);
+}
+
+function copyText() {
+  const text = DOCS[currentDoc].generate(getFields());
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target;
+    btn.textContent = '✅ Copié !';
+    setTimeout(() => btn.textContent = '📋 Copier le texte', 2000);
+  });
+}
+
+// Fermer modal en cliquant dehors
+document.getElementById('docModal').addEventListener('click', function(e) {
+  if (e.target === this) closeDoc();
+});
+</script>
+
+</body>
+</html>
